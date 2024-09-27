@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!------------------------------------------------ custom css --------------------------------------->
+  <link rel="stylesheet" href="../css/login.css">
+  <!----------------------------------------- font awesome ----------------------------------------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!----------------------------------------- font awesome ----------------------------------------->
+  <!-- sweet alert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="sweetalert2.all.min.js"></script>
+
+<!-------------------------------------------------favicon link--------------------------------------------->
+<link rel="shortcut icon" href="../assets/logo-removebg-preview.png" type="image/x-icon">
+<!------------------------------------------favicon link---------------------------------------------->
+<title>WIRELESS WORLD </title>
+</head>
+<body>
+  <div class="heading ">
+    <h1 class="d-flex justify-content-center align-item-center text-uppercase">WIRELESS WORLD</h1>
+    <a href="../index.html"><img id="logo" src="../assets/logo-removebg-preview.png" alt=""></a>
+    <h2 id="font">Login/SignUp</h2>
+    <div></div>
+</div>
+  <div class="container">
+    <video id="bg-video" autoplay muted loop poster="../assets/bg_video.mp4">
+      <source src="../assets/bg_video.mp4" type="video/mp4">
+    </video>
+    
+    <div class="forms-container">
+      <!-- signup -->
+      <div class="form-control signup-form">
+        <form action="#">
+          <h2>Signup</h2>
+          <input id="sname" type="text" placeholder="Username" />
+          <input id="semail" type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <input id="spassword" type="password" placeholder="Confirm password" />
+          <button onclick="signin()" id="btn">Signup</button>
+        </form>
+        <span>or signup with</span>
+        <div class="socials">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-google-plus-g"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+        <a href="../html/index.html#sign"><button class="btt" type="button">Back Page</button></a>
+      </div>
+      <!-- login -->
+      <div class="form-control signin-form">
+        <form action="#">
+          <h2>Login</h2>
+          <input id="email" type="text" placeholder="Email" />
+          <input id="password" type="password" placeholder="Password" />
+          <button onclick="login()">Login</button>
+        </form>
+        <span>or signin with</span>
+        <div class="socials">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-google-plus-g"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+        <a href="../html/index.html"><button class="butn" type="button">Home</button></a>
+      </div>
+    </div>
+    <div class="intros-container">
+      <div class="intro-control signin-intro">
+        <div class="intro-control__inner">
+          <h2>Welcome back!</h2>
+          <p>
+            Welcome back! We are so happy to have you here. It's great to see you again. We hope you had a safe and
+            enjoyable time away.
+          </p>
+          <button id="signup-btn">No account yet? Signup.</button>
+        </div>
+      </div>
+      <div class="intro-control signup-intro">
+        <div class="intro-control__inner">
+          <h2>Come join us!</h2>
+          <p>
+            We are so excited to have you here.If you haven't already, create an account to get access to exclusive
+            offers, rewards, and discounts.
+          </p>
+          <button id="signin-btn">Already have an account? Signin.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    const signupBtn = document.getElementById("signup-btn");
+    const signinBtn = document.getElementById("signin-btn");
+    const mainContainer = document.querySelector(".container");
+
+    signupBtn.addEventListener("click", () => {
+      mainContainer.classList.toggle("change");
+    });
+    signinBtn.addEventListener("click", () => {
+      mainContainer.classList.toggle("change");
+    });
+
+    function signin() {
+      var name = document.getElementById("sname").value
+
+      var email = document.getElementById("semail").value
+      var password = document.getElementById("spassword").value
+      if (name == "" || email == "" || password == "") {
+        var span = document.getElementById("error")
+
+
+        // span.innerText = "YOU HAVE TO FILLED ALL FIELDS"
+        // span.style.display = "inline"
+        // alert('please fill all field')
+        Swal.fire({
+          position: 'center',
+          icon: 'warning',
+          title: 'please fill all fields',
+          showConfirmButton: false,
+          timer: 2000
+        })
+      } else {
+        localStorage.setItem("name", name)
+        localStorage.setItem("email", email)
+        localStorage.setItem("password", password)
+        // alert("account han been created")
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'account han been created',
+          showConfirmButton: false,
+          timer: 2000
+        })
+        // location.href = "./animatedlogin.html"
+      }
+    }
+
+    function removetext() {
+      var span = document.getElementById("error")
+      span.style.display = "none"
+
+    }
+
+
+    function login() {
+      var email = document.getElementById("email").value
+      var password = document.getElementById("password").value
+      console.log(email)
+      var user_email = localStorage.getItem("email")
+      var user_password = localStorage.getItem("password")
+      console.log(user_email)
+      if (user_email == email && user_password == password) {
+        // alert("wellcome")
+        location.href = "./index.html"
+      } else if (email === "" || password === "") {
+        // alert("please fill all fields")
+        Swal.fire({
+          position: 'center',
+          icon: 'warning',
+          title: 'please fill all fields',
+          showConfirmButton: false,
+          timer: 2000
+        })
+
+      } else {
+        // alert("incorrect email or password")
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: 'incorrect email or password.',
+          showConfirmButton: false,
+          timer: 2000
+        })
+      }
+
+    }
+  </script>
+</body>
+</html>

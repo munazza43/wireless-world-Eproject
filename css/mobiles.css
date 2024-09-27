@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.6;
+  }
+  @media (max-width: 750px) {
+    #img{
+       display: none;
+    } 
+    body {
+       background: url("../assets/bg-iphone.webp")no-repeat;
+       background-size: cover;
+    }
+  }
+  #img1{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.6;
+  }
+  @media (max-width: 750px) {
+    #img1{
+       display: none;
+    } 
+    body {
+       background: url("../assets/bg-vivo.jpeg")no-repeat;
+       background-size: cover;
+    }
+  }
+  #img2{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.6;
+  }
+  @media (max-width: 750px) {
+    #img2{
+       display: none;
+    } 
+    body {
+       background: url("../assets/bg-realme.jpeg")no-repeat;
+       background-size: cover;
+    }
+  }
+  #img3{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.6;
+  }
+  @media (max-width: 750px) {
+    #img3{
+       display: none;
+    } 
+    body {
+       background: url("../assets/bg-xiaomi.jpeg")no-repeat;
+       background-size: cover;
+    }
+  }
+  #img4{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.6;
+  }
+  @media (max-width: 750px) {
+    #img4{
+       display: none;
+    } 
+    body {
+       background: url("../assets/bg-samsung.jpeg")no-repeat;
+       background-size: cover;
+    }
+  }
+.heading {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading h1 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 80px;
+}
+.heading h2 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 50px;
+}
+.heading div {
+    width: 400px;
+    border: 6px solid rgb(5, 108, 241);
+}
+.card{
+    padding: 10px;
+    width: 260px;
+    height: 400px;
+    background-image: linear-gradient(to top,
+    rgb(101, 101, 102),
+    rgb(172, 169, 169));
+    border: 0 solid;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(22, 103, 224, 0.35) 0px 54px 55px, rgba(22, 103, 224, 0.20) 0px -12px 30px, rgba(22, 103, 224, 0.20) 0px 4px 6px, rgba(22, 103, 224, 0.27) 0px 12px 13px, rgba(22, 103, 224, 0.19) 0px -3px 5px;
+}
+.card h1{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: bold;
+    margin-top: 15px;
+    color: white;
+}
+.card .image{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 5px;
+} 
+img{
+    transition: 1.5s;
+} 
+img:hover {
+    width: 220px;
+} 
+.card-body p{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.card-body .rating:hover{
+    cursor: pointer;
+}
+.card-body .btn{
+    margin-top: 10px;
+    border: 3px solid black;
+    background-color: blue;
+    color: white;
+    font-family: "Playfair Display", serif;
+}
+.card-body .btn:hover{
+    background-color: #88bcf8;
+    color: black;
+}
+#logo{
+  width: 70px;
+  height: 70px;
+}
+#scrollUp {
+  bottom: 20px;
+  right: 20px;
+  background-image: url('../assets/top.png');
+  width: 38px;
+  height: 38px;
+}

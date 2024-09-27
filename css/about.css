@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#img{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.5;
+  }
+  @media (max-width: 750px) {
+    #img{
+       display: none;
+    } 
+    body {
+       background: url("../assets/pngtree-cbg-about.jpg")no-repeat;
+       background-size: cover;
+    }
+  }
+  .containermt-5{
+    margin-top: 90px;
+  }
+.heading {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading h1 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 80px;
+}
+
+.heading div {
+    margin-right: 20px;
+    width: 430px;
+    border: 4px solid rgb(5, 18, 131);
+}
+
+.para {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+}
+h1{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 50px;
+}
+#logo{
+    width: 70px;
+    height: 70px;
+}
+#scrollUp {
+    bottom: 20px;
+    right: 20px;
+    background-image: url('../assets/top.png');
+    width: 38px;
+    height: 38px;
+  }

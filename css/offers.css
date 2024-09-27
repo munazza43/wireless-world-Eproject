@@ -1,0 +1,11 @@
+.img-background {
+    background: url(../assets/offer.jpg) center/cover no-repeat;
+    height: 400px;
+    width: 100%;
+  }
+  #btn{
+    position: relative;
+    top: 300px;
+  }
+  
+  

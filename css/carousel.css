@@ -1,0 +1,49 @@
+/* Carousel-S */
+
+@media  screen and (orientation: landscape) {
+.carousel img{
+    max-height: 100vh;
+}
+}
+.carousel-caption h1{
+    font-family: 'Times New Roman', Times, serif; 
+    font-style: italic;
+    padding: 20px;
+    font-size: 70px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+.button{
+    font-size: large;
+    font-weight: 500;
+    border-radius: 25px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    border: 3px solid black;
+}
+.button:hover{
+    background-color: rgb(143, 145, 145);
+    color: black;
+}
+.heading {
+   
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.heading h1 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 80px;
+}
+
+.heading div {
+    margin-right: 20px;
+    height: 90px;
+    border: 4px solid rgb(0, 103, 238);
+}
+/* Carousel-E */
